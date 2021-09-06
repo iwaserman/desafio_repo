@@ -1,0 +1,30 @@
+.premios {
+    p {
+    display: inline-flex;
+        .Oscar {
+        width: 2%;
+        height: 5%;
+        justify-content: space-between;} 
+        .NoOscar {
+            width: 2%;
+            height: 5%;
+            justify-content: center;
+            color: gray;
+            opacity: .4;
+        }   
+}
+    
+}
+.errorOscar{
+    p{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+    iframe{
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;    
+        justify-content: space-around;
+}
+}

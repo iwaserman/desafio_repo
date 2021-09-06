@@ -1,0 +1,37 @@
+.mainPersonaje {
+    height: 75vh;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    padding: 0;
+
+
+    div {
+        width: 25%;
+        height: 100%;
+        margin: 10px;
+        border: #fff solid 3px;
+        padding: 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr; 
+        grid-template-areas: "personajeTitulo" "personajeFoto" "personajeTexto";
+        justify-items: center;}
+            .main__div img {
+                width: 300px;
+                grid-area: personajeFoto;
+
+                .DescripcionPersonaje{
+                    font-size: 1em;
+                    align-self: center;
+                              }
+                }
+p {
+ font-size: 100%;
+ text-align: center;
+ 
+}
+}

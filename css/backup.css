@@ -1,0 +1,228 @@
+@font-face {
+    font-family: nite;
+    src: url(NITECLUB.TTF);
+}
+
+* {
+    color: white;
+}
+
+header{
+    line-height: 20px;
+    text-align: center;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: "titulo" "navegador";
+    align-items: center;
+    background-image: linear-gradient(black);
+}
+.titulo{
+    grid-area: titulo;
+}
+.titulo a{
+    font-size: 300%;
+    font-family: nite;
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    grid-area:titulo;
+}
+
+a{
+    color: white;
+
+}
+
+.navHeader{
+    grid-area: navegador;
+}
+.navHeader ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+.navHeader ul li{
+        margin-left: 10px;
+        margin-right: 10px;
+
+}
+.navHeader ul li a{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(black,#140d53,#2c3c89,#3954da);
+}
+h2,h3 {
+    font-size: 200%;
+    text-align: center;
+    text-decoration: underline;   
+    font-family: 'Zen Tokyo Zoo', cursive; 
+    margin: 10px 80px;
+ }
+
+.parrafo-sinopsis {
+    text-align: center;
+    text-decoration: none;
+}
+.logo{
+    width: 100px;
+    margin: 20px;
+    justify-self: start;
+    align-items: start;
+}
+
+.Presentacion {
+    display: block;
+    margin: auto;
+}
+
+footer nav ul,.premios ul{
+    list-style-type:none;
+    font-weight: bold;
+}
+.trailer, .canciones{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+/*Seccion Premios */
+
+.premios p {
+    display: inline-flex;
+}
+
+
+.Oscar {
+    width: 55px;
+    justify-content: space-between;
+    
+}
+
+.NoOscar {
+    width: 55px;
+    justify-content: center;
+    color: gray;
+    opacity: .4;
+}
+
+.errorOscar p{
+    text-align: center;
+}
+
+/*Seccion Fotografia*/
+.fotos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 15px;
+}
+
+.fotos img {
+    width: 800px;
+    color: gray;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+
+.fotos img:hover{
+    border: 5px white double;
+    transform: scale(1.1);
+}
+
+.carousel-inner {
+    width: auto;
+    margin: auto;
+
+}
+
+.carousel-inner img {
+    border: 5px white double;
+    width: auto;
+    margin: auto;
+    
+}
+
+/*Seccion Locaciones*/
+.locaciones iframe, .errorOscar iframe, .mainSoundtrack iframe{
+margin: auto;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+}
+
+.locaciones p {
+    text-align: center;
+}
+
+
+/*Seccion Personajes*/
+.mainPersonaje{
+    height: 100vh;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+}
+
+.main__div {
+    width: 25%;
+    height: 75%;
+    margin: 10px;
+    border: #fff solid 3px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr; 
+    grid-template-areas: "personajeTitulo" "personajeFoto" "personajeTexto";
+    justify-items: center;
+
+}
+
+.main__div img {
+    width: 300px;
+    grid-area: personajeFoto;
+}
+
+.mainPersonaje p {
+ font-size: 100%;
+ text-align: center;
+ 
+}
+
+/*Seccion Soundtrack*/
+
+.mainSoundtrack h4 {
+    font-size: 150%;
+    font-family:'Zen Tokyo Zoo';
+    text-align: center;
+}
+
+.mainSoundtrack iframe {
+        text-align: space-around;
+        align-content: center;
+
+    }
+
+/*Mobile*/
+
+
+@media only screen and (max-width 576) {
+
+    h1{
+         font-size: 5px;
+    }
+
+}

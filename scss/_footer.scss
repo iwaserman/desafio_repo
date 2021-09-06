@@ -1,0 +1,97 @@
+/* Footer */
+footer{
+    height: 30vh;
+    border-top: 5px double  white;
+    margin-top: 8vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 0.4fr;
+    grid-template-areas: "imagen" "redes" "copyright";
+    justify-items: center;
+    align-content: center;
+    .footer__img{
+        grid-area: imagen;
+        align-self: center;
+        img{
+           width: 25vw;
+            -webkit-filter: invert(100%);
+            -moz-filter: invert(100%);
+            filter: invert(100%);
+           }
+        }
+    }
+    .footer__nav{
+        justify-self: center;
+        align-self: center;
+        display: none;
+        h3{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        ul{
+            list-style: none;
+			color: white;
+            a{
+                text-decoration: none;
+                color: white;
+                transition: 0.5s;
+				&:hover{
+                    color: white ;
+                }
+            }
+        }
+    }
+    .redes{
+        grid-area: redes;
+        align-self: center;
+        justify-self: center;
+        img{
+            width: 30px;
+            margin:2vw;
+            transition: 0.5s;
+            border-radius: 5px;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .copyright{
+        grid-area: copyright;
+        justify-self: center;
+        align-self: center;
+    }
+    @media only screen and (min-width:1024px){
+
+    footer{
+        height: 40vh;
+        margin-top: 10vh;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr, 1fr, 0.4fr;
+        grid-template-areas: "imagen imagen" "footnav redes" "copyright copyright";
+        justify-items: center;
+        align-content: center;
+        .footer__img{
+            grid-area: imagen;
+            img{
+                width: 30vw;
+            }
+        }
+        .footer__nav{
+            display: block;
+            grid-area: footnav;
+        }
+        .redes{
+            grid-area: redes;
+            img{
+                margin: 20px;
+                padding:8px;
+                width: 4vw;
+            }
+        }
+        .copyright{
+            grid-area: copyright;
+
+        }
+    }
+}

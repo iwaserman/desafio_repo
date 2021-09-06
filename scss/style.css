@@ -1,0 +1,469 @@
+@charset "UTF-8";
+header {
+  line-height: 20px;
+  text-align: center;
+  margin: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 3fr 1fr;
+      grid-template-rows: 3fr 1fr;
+      grid-template-areas: "titulo" "navegador";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .titulo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+}
+
+header .titulo a {
+  font-size: 300%;
+  font-family: nite;
+  text-decoration: none;
+  color: white;
+}
+
+header .titulo .lalogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: imagen;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 25vw;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+header .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: titulo;
+  width: 100px;
+  margin: 20px;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+header .navHeader {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: navegador;
+}
+
+header .navHeader ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .navHeader ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+header .navHeader ul li a {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+/* Footer */
+footer {
+  height: 30vh;
+  border-top: 5px double  white;
+  margin-top: 8vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr, 1fr, 0.4fr;
+      grid-template-rows: 1fr, 1fr, 0.4fr;
+      grid-template-areas: "imagen" "redes" "copyright";
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .footer__img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: imagen;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer .footer__img img {
+  width: 25vw;
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.footer__nav {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: none;
+}
+
+.footer__nav h3 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.footer__nav ul {
+  list-style: none;
+  color: white;
+}
+
+.footer__nav ul a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer__nav ul a:hover {
+  color: white;
+}
+
+.redes {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: redes;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.redes img {
+  width: 30px;
+  margin: 2vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.redes img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.copyright {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: copyright;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    height: 40vh;
+    margin-top: 10vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1fr, 1fr, 0.4fr;
+        grid-template-rows: 1fr, 1fr, 0.4fr;
+        grid-template-areas: "imagen imagen" "footnav redes" "copyright copyright";
+    justify-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  footer .footer__img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: imagen;
+  }
+  footer .footer__img img {
+    width: 30vw;
+  }
+  footer .footer__nav {
+    display: block;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: footnav;
+  }
+  footer .redes {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: redes;
+  }
+  footer .redes img {
+    margin: 20px;
+    padding: 8px;
+    width: 4vw;
+  }
+  footer .copyright {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: copyright;
+  }
+}
+
+@font-face {
+  font-family: nite;
+  src: url(NITECLUB.TTF);
+}
+
+html {
+  /* etiqueta raíz */
+  font-size: 95%;
+}
+
+* {
+  /* letra todo */
+  color: white;
+}
+
+h2, h3 {
+  /* letra H2 H3 */
+  font-size: 200%;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  margin: 10px 80px;
+}
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(#140d53), color-stop(#2c3c89), to(#3954da));
+  background-image: linear-gradient(black, #140d53, #2c3c89, #3954da);
+}
+
+.parrafo-sinopsis {
+  /* parrafo sinopsis*/
+  text-align: center;
+  text-decoration: none;
+}
+
+.trailer iframe {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Presentacion {
+  display: block;
+  margin: auto;
+}
+
+.premios p {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.premios p .Oscar {
+  width: 2%;
+  height: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.premios p .NoOscar {
+  width: 2%;
+  height: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: gray;
+  opacity: .4;
+}
+
+.errorOscar p {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.errorOscar iframe {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.fotos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px;
+}
+
+.fotos img {
+  width: 800px;
+  color: gray;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.fotos img img:hover {
+  border: 5px white double;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.carousel {
+  display: none;
+}
+
+.carousel-inner {
+  width: auto;
+  margin: auto;
+  height: auto;
+}
+
+.carousel-inner img {
+  border: 5px white double;
+  width: auto;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .carousel {
+    display: block;
+  }
+}
+
+.mainSoundtrack h4 {
+  font-size: 150%;
+  font-family: 'Zen Tokyo Zoo';
+  text-align: center;
+}
+
+.mainSoundtrack iframe {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.locaciones p {
+  text-align: center;
+}
+
+.locaciones iframe {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mainPersonaje {
+  height: 75vh;
+  margin-left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  padding: 0;
+}
+
+.mainPersonaje div {
+  width: 25%;
+  height: 100%;
+  margin: 10px;
+  border: #fff solid 3px;
+  padding: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.5fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr;
+      grid-template-areas: "personajeTitulo" "personajeFoto" "personajeTexto";
+  justify-items: center;
+}
+
+.mainPersonaje .main__div img {
+  width: 300px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: personajeFoto;
+}
+
+.mainPersonaje .main__div img .DescripcionPersonaje {
+  font-size: 1em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainPersonaje p {
+  font-size: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: nite;
+    src: url(NITECLUB.TTF);
+}
+
+html { /* etiqueta raíz */
+    font-size: 95%;
+ }
+
+ * {/* letra todo */
+    color: white;
+}
+
+h2,h3 {/* letra H2 H3 */
+    font-size: 200%;
+    text-align: center;
+    text-decoration: underline;   
+    font-family: 'Zen Tokyo Zoo', cursive; 
+    margin: 10px 80px;
+ }
+
+body {
+    background-image: linear-gradient(black,#140d53,#2c3c89,#3954da);
+}
